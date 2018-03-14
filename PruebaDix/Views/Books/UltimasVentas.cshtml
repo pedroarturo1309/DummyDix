@@ -1,0 +1,14 @@
+﻿@model IEnumerable<PruebaDix.Models.Views.vw_ultimasventas>
+
+@{
+    ViewBag.Title = "UltimasVentas";
+}
+
+<h2>5 Libros que han mantenido sus ventas los ultimos 3 años</h2>
+
+<ol>
+    @foreach(var item in Model)
+    {
+        <li><h3><b>@item.title</b></h3></li>
+    }
+</ol>

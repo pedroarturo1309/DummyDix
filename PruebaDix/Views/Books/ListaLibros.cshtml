@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PruebaDix.Models.Views.vw_ListaLibro>
+@{
+    ViewBag.Title = "ListaLibros";
+}
+
+<h2>Lista de libros</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>
+                <b>Libro</b>
+            </td>
+            <td>
+                <b>Nombre</b>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.title</td>
+                <td>
+                    @item.au_fname @item.au_lname
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
